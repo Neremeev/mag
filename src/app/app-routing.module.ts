@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {PatienstComponent} from "./pages/patienst/patienst.component";
+import {ParameterComponent} from "./pages/parameter/parameter.component";
+import {GroupComponent} from "./pages/group/group.component";
 
 
 const routes: Routes = [
@@ -10,11 +12,11 @@ const routes: Routes = [
   },
   {
     path: 'parameters',
-    component: PatienstComponent
+    component: ParameterComponent
   },
   {
     path: 'groups',
-    component: PatienstComponent
+    component: GroupComponent
   },
   {
     path: '',

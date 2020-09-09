@@ -9,6 +9,9 @@ import {FormsModule} from "@angular/forms";
 import {PatientsModule} from "./pages/patienst/patients.module";
 import {SideNavModule} from "./common/components/side-nav/side-nav.module";
 import {RootStoreModule} from "./root-state/root-store.module";
+import {GroupModule} from "./pages/group/group.module";
+import {ParameterModule} from "./pages/parameter/parameter.module";
+import {TopMenuModule} from "./common/components/top-menu/top-menu.module";
 
 @NgModule({
   declarations: [
@@ -21,8 +24,11 @@ import {RootStoreModule} from "./root-state/root-store.module";
     BrowserAnimationsModule,
     AngularMaterialModule,
     PatientsModule,
+    GroupModule,
+    ParameterModule,
     SideNavModule,
-    RootStoreModule
+    RootStoreModule,
+    TopMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

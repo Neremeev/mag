@@ -4,14 +4,17 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-icon
-      class="menu-icon"
-      aria-hidden="false"
-      (click)="sidenav.toggle()"
-      aria-label="Example home icon"
-    >
-      menu
-    </mat-icon>
+    <div class="top-content">
+      <mat-icon
+        class="menu-icon"
+        aria-hidden="false"
+        (click)="sidenav.toggle()"
+        aria-label="Example home icon"
+      >
+        menu
+      </mat-icon>
+      <app-top-menu></app-top-menu>
+    </div>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

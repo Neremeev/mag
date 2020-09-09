@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Store} from "@ngrx/store";
 import {navigateTo} from "../../../root-state/actions/router.actions";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-side-nav',
@@ -10,12 +11,15 @@ import {navigateTo} from "../../../root-state/actions/router.actions";
 export class SideNavComponent {
 
 
-  items = ['patients', 'parameters', 'groups']
-  activeItem = this.items[0];
+  items = ['patients', 'parameters', 'groups'];
+  activeItem: string;
 
   constructor(
-    private readonly store$: Store<any>
-  ) {}
+    private readonly store$: Store<any>,
+    router: Router
+  ) {
+    router.events.subscribe((data: any) => data.url ? this.activeItem = data.url.split('/')[1] : null);
+  }
 
   goTo(path) {
     this.activeItem = path;
