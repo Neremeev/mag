@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AngularMaterialModule} from "./common/modules/material.module";
 import {FormsModule} from "@angular/forms";
 import {PatientsModule} from "./pages/patienst/patients.module";
+import {SideNavModule} from "./common/components/side-nav/side-nav.module";
+import {RootStoreModule} from "./root-state/root-store.module";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {PatientsModule} from "./pages/patienst/patients.module";
     FormsModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    PatientsModule
+    PatientsModule,
+    SideNavModule,
+    RootStoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

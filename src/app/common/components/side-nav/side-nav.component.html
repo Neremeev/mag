@@ -1,0 +1,31 @@
+<div class="wrapper">
+  <h3>COMPONENTS</h3>
+
+  <div class="menu-item" (click)="goTo(items[0])" [ngClass]="{'active-menu': activeItem === items[0]}">
+    <mat-icon
+      class="menu-icon"
+      aria-hidden="false"
+    >
+      face
+    </mat-icon>
+    <span>Пациенты</span>
+  </div>
+  <div class="menu-item" (click)="goTo(items[1])" [ngClass]="{'active-menu': activeItem === items[1]}">
+    <mat-icon
+      class="menu-icon"
+      aria-hidden="false"
+    >
+      build
+    </mat-icon>
+    <span>Параметры системы</span>
+  </div>
+  <div class="menu-item" (click)="goTo(items[2])" [ngClass]="{'active-menu': activeItem === items[2]}">
+    <mat-icon
+      class="menu-icon"
+      aria-hidden="false"
+    >
+      group
+    </mat-icon>
+    <span>Группы риска</span>
+  </div>
+</div>
